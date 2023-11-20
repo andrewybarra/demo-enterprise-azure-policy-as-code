@@ -1,0 +1,19 @@
+{
+  "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+  "createdOn": "2023-11-20 22:10:34Z",
+  "roleAssignments": {
+    "added": [
+      {
+        "displayName": null,
+        "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
+        "objectType": "ServicePrincipal",
+        "roleDisplayName": "Contributor",
+        "assignmentId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/SB-Tagging",
+        "principalId": null,
+        "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+      }
+    ],
+    "numberOfChanges": 1,
+    "removed": []
+  }
+}
