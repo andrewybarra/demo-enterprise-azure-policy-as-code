@@ -1,0 +1,196 @@
+{
+  "policySetDefinitions": {
+    "delete": {},
+    "update": {},
+    "numberUnchanged": 0,
+    "replace": {},
+    "numberOfChanges": 1,
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policySetDefinitions/cb71df76-7a26-4035-957f-0cf08844c4df": {
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policySetDefinitions/cb71df76-7a26-4035-957f-0cf08844c4df",
+        "metadata": {
+          "version": "1.0.0",
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+          "category": "Tag"
+        },
+        "parameters": null,
+        "policyDefinitions": [
+          {
+            "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/5adc8112-eab4-4fe6-b786-710b6b9f548c",
+            "policyDefinitionReferenceId": "Require owner Tag on resources"
+          },
+          {
+            "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/638ee850-1095-41ea-ae28-7aa964a70a31",
+            "policyDefinitionReferenceId": "Require app_id Tag on resources"
+          },
+          {
+            "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/17d09893-398f-4747-bafe-c21de15337e8",
+            "policyDefinitionReferenceId": "Require revenue Tag on resources"
+          },
+          {
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b27a0cbd-a167-4dfa-ae64-4337be671140",
+            "policyDefinitionReferenceId": "Built In: Inherit a tag from the subscription",
+            "parameters": {
+              "tagName": {
+                "value": "environment"
+              }
+            }
+          }
+        ],
+        "policyDefinitionGroups": null,
+        "displayName": "Tagging Initiative",
+        "description": "This is the groupig of tagging policies required for this environment",
+        "name": "cb71df76-7a26-4035-957f-0cf08844c4df",
+        "scopeId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+      }
+    }
+  },
+  "exemptions": {
+    "numberOfExpired": 0,
+    "update": {},
+    "numberOfChanges": 0,
+    "numberOfOrphans": 0,
+    "new": {},
+    "replace": {},
+    "delete": {},
+    "numberUnchanged": 0
+  },
+  "createdOn": "2023-11-21 15:05:49Z",
+  "assignments": {
+    "delete": {},
+    "update": {},
+    "numberUnchanged": 0,
+    "replace": {},
+    "numberOfChanges": 1,
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/Stg-Tagging": {
+        "displayName": "Stg-Tagging",
+        "identityRequired": true,
+        "description": "EPAC-Staging Environment controls enforcement with Policy for Tagging Requirements",
+        "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
+        "name": "Stg-Tagging",
+        "notScopes": [],
+        "metadata": {
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+          "roles": [
+            {
+              "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+              "roleDisplayName": "Contributor",
+              "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+            }
+          ]
+        },
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/Stg-Tagging",
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policySetDefinitions/cb71df76-7a26-4035-957f-0cf08844c4df",
+        "identity": {
+          "type": "SystemAssigned"
+        },
+        "enforcementMode": "Default",
+        "managedIdentityLocation": "eastus2"
+      }
+    }
+  },
+  "policyDefinitions": {
+    "delete": {},
+    "update": {},
+    "numberUnchanged": 0,
+    "replace": {},
+    "numberOfChanges": 3,
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/638ee850-1095-41ea-ae28-7aa964a70a31": {
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/638ee850-1095-41ea-ae28-7aa964a70a31",
+        "metadata": {
+          "version": "1.0.0",
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+          "category": "Tags"
+        },
+        "parameters": null,
+        "mode": "All",
+        "policyRule": {
+          "if": {
+            "allOf": [
+              {
+                "field": "tags['revenue']",
+                "exists": "false"
+              },
+              {
+                "field": "tags['revenue']",
+                "notEquals": ""
+              }
+            ]
+          },
+          "then": {
+            "effect": "deny"
+          }
+        },
+        "displayName": "Require revenue Tag on resources",
+        "description": "This policy validates the tag 'revenue' is added to a resource and ensures a value is present",
+        "name": "638ee850-1095-41ea-ae28-7aa964a70a31",
+        "scopeId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+      },
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/17d09893-398f-4747-bafe-c21de15337e8": {
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/17d09893-398f-4747-bafe-c21de15337e8",
+        "metadata": {
+          "version": "1.0.0",
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+          "category": "Tags"
+        },
+        "parameters": null,
+        "mode": "All",
+        "policyRule": {
+          "if": {
+            "allOf": [
+              {
+                "field": "tags['app_id']",
+                "exists": "false"
+              },
+              {
+                "field": "tags['app_id']",
+                "notEquals": ""
+              }
+            ]
+          },
+          "then": {
+            "effect": "audit"
+          }
+        },
+        "displayName": "Require app_id Tag on resources",
+        "description": "This policy validates the tag 'app_id' is added to a resource and ensures a value is present",
+        "name": "17d09893-398f-4747-bafe-c21de15337e8",
+        "scopeId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+      },
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/5adc8112-eab4-4fe6-b786-710b6b9f548c": {
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyDefinitions/5adc8112-eab4-4fe6-b786-710b6b9f548c",
+        "metadata": {
+          "version": "1.0.0",
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+          "category": "Tags"
+        },
+        "parameters": null,
+        "mode": "All",
+        "policyRule": {
+          "if": {
+            "allOf": [
+              {
+                "field": "tags['owner']",
+                "exists": "false"
+              },
+              {
+                "field": "tags['owner']",
+                "notEquals": ""
+              }
+            ]
+          },
+          "then": {
+            "effect": "deny"
+          }
+        },
+        "displayName": "Require owner Tag on resources",
+        "description": "This policy validates the tag 'owner' is added to a resource and ensures a value is present",
+        "name": "5adc8112-eab4-4fe6-b786-710b6b9f548c",
+        "scopeId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+      }
+    }
+  },
+  "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29"
+}
