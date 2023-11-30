@@ -1,0 +1,56 @@
+{
+  "exemptions": {
+    "delete": {},
+    "numberOfExpired": 0,
+    "replace": {},
+    "new": {},
+    "update": {},
+    "numberUnchanged": 0,
+    "numberOfOrphans": 0,
+    "numberOfChanges": 0
+  },
+  "policySetDefinitions": {
+    "update": {},
+    "numberOfChanges": 0,
+    "new": {},
+    "delete": {},
+    "numberUnchanged": 1,
+    "replace": {}
+  },
+  "createdOn": "2023-11-30 16:37:59Z",
+  "policyDefinitions": {
+    "update": {},
+    "numberOfChanges": 0,
+    "new": {},
+    "delete": {},
+    "numberUnchanged": 3,
+    "replace": {}
+  },
+  "assignments": {
+    "update": {},
+    "numberOfChanges": 1,
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/eps-asb": {
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/eps-asb",
+        "notScopes": [],
+        "enforcementMode": "Default",
+        "description": "EPAC-Staging Environment controls enforcement with Azure Security Benchmark Initiative.",
+        "identityRequired": false,
+        "displayName": "EPS Azure Security Benchmark",
+        "name": "eps-asb",
+        "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
+        "metadata": {
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29"
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+        "identity": {
+          "type": "None"
+        }
+      }
+    },
+    "delete": {},
+    "numberUnchanged": 1,
+    "replace": {}
+  },
+  "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29"
+}
