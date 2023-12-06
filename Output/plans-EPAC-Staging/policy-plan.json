@@ -1,0 +1,81 @@
+{
+  "policyDefinitions": {
+    "numberUnchanged": 3,
+    "update": {},
+    "delete": {},
+    "numberOfChanges": 0,
+    "new": {},
+    "replace": {}
+  },
+  "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29",
+  "policySetDefinitions": {
+    "numberUnchanged": 1,
+    "update": {},
+    "delete": {},
+    "numberOfChanges": 0,
+    "new": {},
+    "replace": {}
+  },
+  "assignments": {
+    "numberUnchanged": 0,
+    "update": {},
+    "delete": {},
+    "numberOfChanges": 2,
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/eps-asb": {
+        "displayName": "EPS Azure Security Benchmark",
+        "identity": {
+          "type": "None"
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+        "description": "EPAC-Staging Environment controls enforcement with Azure Security Benchmark Initiative.",
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/eps-asb",
+        "identityRequired": false,
+        "enforcementMode": "Default",
+        "metadata": {
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29"
+        },
+        "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
+        "notScopes": [],
+        "name": "eps-asb"
+      },
+      "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/Stg-Tagging": {
+        "name": "Stg-Tagging",
+        "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
+        "description": "EPAC-Staging Environment controls enforcement with Policy for Tagging Requirements",
+        "identityRequired": true,
+        "displayName": "Stg-Tagging",
+        "metadata": {
+          "roles": [
+            {
+              "roleDisplayName": "Contributor",
+              "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+              "scope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+            }
+          ],
+          "pacOwnerId": "11083790-9b94-41c8-a7f8-92c3e4126e29"
+        },
+        "managedIdentityLocation": "eastus2",
+        "id": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policyAssignments/Stg-Tagging",
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350/providers/Microsoft.Authorization/policySetDefinitions/cb71df76-7a26-4035-957f-0cf08844c4df",
+        "enforcementMode": "Default",
+        "notScopes": [],
+        "identity": {
+          "type": "SystemAssigned"
+        }
+      }
+    },
+    "replace": {}
+  },
+  "createdOn": "2023-12-06 20:04:28Z",
+  "exemptions": {
+    "delete": {},
+    "replace": {},
+    "new": {},
+    "numberOfExpired": 0,
+    "update": {},
+    "numberOfChanges": 0,
+    "numberUnchanged": 0,
+    "numberOfOrphans": 0
+  }
+}
