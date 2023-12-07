@@ -15,6 +15,7 @@ on:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     name: Build Deployment Plan
     runs-on: ubuntu-latest
     steps:
@@ -97,6 +98,7 @@ jobs:
 
   deployPolicy:
     needs: build
+    if: github.ref == 'refs/heads/main'
     name: Deploy Policy Plan
     runs-on: ubuntu-latest
     environment: 
@@ -137,6 +139,7 @@ jobs:
 
   deployRoles:
     needs: deployPolicy
+    if: github.ref == 'refs/heads/main'
     name: Deploy Policy Roles
     runs-on: ubuntu-latest
     environment: 
