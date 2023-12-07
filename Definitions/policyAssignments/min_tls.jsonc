@@ -31,7 +31,7 @@
         "assignment": {
           "name": "Prod-",
           "displayName": "Prod-",
-          "description": "Production Environment controls enforcement with "
+          "description": "Prod Environment controls enforcement with "
         },
         "scope": {
           "Production": [
