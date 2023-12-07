@@ -1,0 +1,43 @@
+{
+    "nodeName": "/keyvault/",
+    "definitionEntryList": [
+      {
+        "policyId": "/providers/Microsoft.Authorization/policyDefinitions/a6abeaec-4d90-4a02-805f-6b26c4d3fbe9",
+        "displayName": "privLink",
+        "assignment": {
+          "append": true,
+          "name": "privLink",
+          "displayName": "privLink",
+          "description": "Policy for privLink Requirements"
+        }
+      }
+    ],
+    "children": [
+      {
+        "nodeName": "EPAC-Staging/",
+        "assignment": {
+          "name": "Stg-",
+          "displayName": "Stg-",
+          "description": "EPAC-Staging Environment controls enforcement with "
+        },
+        "scope": {
+          "EPAC-Staging": [
+            "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+          ]
+        }
+      },
+      {
+        "nodeName": "Production",
+        "assignment": {
+          "name": "Prod-",
+          "displayName": "Prod-",
+          "description": "Production Environment controls enforcement with "
+        },
+        "scope": {
+          "Production": [
+            "/providers/Microsoft.Management/managementGroups/af7c1edc-fe91-4bbe-98d9-aa3943b9a02a"
+          ]
+        }
+      }
+    ]
+  }
