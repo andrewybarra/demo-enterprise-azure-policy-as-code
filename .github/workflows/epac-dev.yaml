@@ -148,7 +148,7 @@ jobs:
       - name: Copy Artifact directory to Output Folder
         shell: pwsh
         run: |
-          Copy-Item -Path .\plans-EPAC-Staging -Destination .\Output -Recurse -Force
+          Copy-Item -Path ".\plans-${{ env.pacEnvironment }}" -Destination "$env:planFolder\plans-${{ env.pacEnvironment }}" -Recurse -Force
 
       - shell: pwsh
         name: Install Required Modules
