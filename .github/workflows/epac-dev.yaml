@@ -109,11 +109,6 @@ jobs:
         shell: pwsh
         run: |
           Copy-Item -Path ".\plans-${{ env.pacEnvironment }}" -Destination "$env:planFolder\plans-${{ env.pacEnvironment }}" -Recurse -Force
-          
-      - name: Print Working Directory
-        shell: pwsh
-        run: |
-          ls $env:planFolder
 
       - shell: pwsh
         name: Install Required Modules
