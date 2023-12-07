@@ -27,7 +27,7 @@
         }
       },
       {
-        "nodeName": "Production",
+        "nodeName": "Production/",
         "assignment": {
           "name": "Prod-",
           "displayName": "Prod-",
