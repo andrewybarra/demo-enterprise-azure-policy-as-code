@@ -71,8 +71,8 @@ jobs:
       - name: Display Policy Plan File
         id: checkPolicy
         run: |
-          if (Test-Path -Path Output/plans-EPAC-Staging/policy-plan.json) {
-            Get-Content Output/plans-EPAC-Staging/policy-plan.json | ConvertFrom-Json | ConvertTo-Json -Depth 10
+          if (Test-Path -Path "Output/plans-${{ env.pacEnvironment }}/policy-plan.json") {
+            Get-Content "Output/plans-${{ env.pacEnvironment }}/policy-plan.json" | ConvertFrom-Json | ConvertTo-Json -Depth 10
           } else {
             Write-Output "Policy-Plan file does not exist"
           }
@@ -81,8 +81,8 @@ jobs:
       - name: Display Roles Plan file
         id: checkRole
         run: |
-          if (Test-Path -Path Output/plans-EPAC-Staging/roles-plan.json) {
-            Get-Content Output/plans-EPAC-Staging/roles-plan.json | ConvertFrom-Json | ConvertTo-Json -Depth 10
+          if (Test-Path -Path "Output/plans-${{ env.pacEnvironment }}/roles-plan.json") {
+            Get-Content "Output/plans-${{ env.pacEnvironment }}/roles-plan.json" | ConvertFrom-Json | ConvertTo-Json -Depth 10
           } else {
             Write-Output "Roles-Plan file does not exist"
           }
