@@ -21,7 +21,10 @@
           "description": "EPAC-Staging Environment controls enforcement with "
         },
         "parameters": {
-            "emailSecurityContact": "andrewybarra@microsoft.com"
+            "emailSecurityContact": "andrewybarra@microsoft.com",
+            "logAnalytics": "asdf",
+            "ascExportResourceGroupName": "test",
+            "eastUS": "ascExportResourceGroupLocation"
         },
         "scope": {
           "EPAC-Staging": [
