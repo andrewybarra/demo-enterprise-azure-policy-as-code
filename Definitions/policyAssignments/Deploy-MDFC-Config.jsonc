@@ -24,7 +24,7 @@
             "emailSecurityContact": "andrewybarra@microsoft.com",
             "logAnalytics": "asdf",
             "ascExportResourceGroupName": "test",
-            "eastUS": "ascExportResourceGroupLocation"
+            "ascExportResourceGroupLocation": "eastUS"
         },
         "scope": {
           "EPAC-Staging": [
