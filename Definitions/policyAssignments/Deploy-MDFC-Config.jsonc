@@ -20,6 +20,9 @@
           "displayName": "Stg-",
           "description": "EPAC-Staging Environment controls enforcement with "
         },
+        "parameters": {
+            "emailSecurityContact": "andrewybarra@microsoft.com"
+        },
         "scope": {
           "EPAC-Staging": [
             "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
