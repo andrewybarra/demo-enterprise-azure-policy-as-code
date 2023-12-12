@@ -1,4 +1,4 @@
-name: EPAC-DEV Workflow
+name: EPAC-DEV
 
 env:
   pacEnvironment: EPAC-Staging # Change this to a PAC environment name
