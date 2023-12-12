@@ -1,4 +1,4 @@
-name: Production Workflow
+name: Production
 
 env:
   pacEnvironment: Production # Change this to a PAC environment name
