@@ -1,4 +1,4 @@
-name: Production
+name: PRODUCTION
 
 env:
   pacEnvironment: Production # Change this to a PAC environment name
