@@ -18,7 +18,7 @@
         "assignment": {
           "name": "Stg-",
           "displayName": "Stg-",
-          "description": "EPAC-Staging Environment controls enforcement with "
+          "description": "EPAC-Stg Environment controls enforcement with "
         },
         "scope": {
           "EPAC-Staging": [
